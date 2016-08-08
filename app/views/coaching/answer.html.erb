@@ -1,14 +1,18 @@
-<div class="question-answer">
-  <div class="question">
-    <p><%= @query %></p>
-    <p>- You</p>
-  </div>
-  <div class="answer">
-    <p><%= @answer %></p>
-    <p>- Your coach</p>
-  </div>
 
-  <div class="question-link">
-    <%= link_to "Ask a new question", ask_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <div class="question-answer">
+        <blockquote>
+          <p><%= @query %></p>
+          <footer>You</footer>
+        </blockquote>
+        <blockquote>
+          <p><%= @answer %></p>
+          <footer>Your coach</footer>
+        </blockquote>
+        <%= link_to "Ask a new question", ask_path, class: "btn btn-primary" %>
+      </div>
+    </div>
   </div>
 </div>
